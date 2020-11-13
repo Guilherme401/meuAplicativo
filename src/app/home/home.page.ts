@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+public usuario: any = {}
+
+private nome: string;
+
   constructor() {}
 
+  enviarFormulario() {
+    console.log(this.usuario);
+  }
 }
