@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,23 @@ export class HomePage {
 
 public usuario: any = {}
 
-private nome: string;
+public num1: number;
+public num2: number;
+public operacao: string;
 
-  constructor() {}
+  constructor(public alertController: AlertController) {}
 
-  enviarFormulario() {
-    console.log(this.usuario);
+   async enviarFormulario() {
+     console.log(this.operacao);
+     let total = this.num1 + this.num2;
+     const texto = `O valor total da conta é de ${total}`;
+    
+
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: texto,
+      buttons: ['ok']
+    })
+    await alert.present();
   }
 }
