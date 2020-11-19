@@ -8,18 +8,29 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
-public usuario: any = {}
-
 public num1: number;
 public num2: number;
 public operacao: string;
+public calculo: number;
 
   constructor(public alertController: AlertController) {}
 
    async enviarFormulario() {
-     console.log(this.operacao);
-     let total = this.num1 + this.num2;
-     const texto = `O valor total da conta é de ${total}`;
+     if(this.operacao == "add"){
+      this.calculo = this.num1 + this.num2;
+     }
+     if(this.operacao == "sub"){
+      this.calculo = this.num1 - this.num2;
+     }
+     if(this.operacao == "mul"){
+      this.calculo = this.num1 * this.num2;
+     }
+     if(this.operacao == "div"){
+       this.calculo = this.num1 / this.num2;
+     }
+     
+    
+     const texto = `O valor total da conta é de ${this.calculo}`;
     
 
     const alert = await this.alertController.create({
