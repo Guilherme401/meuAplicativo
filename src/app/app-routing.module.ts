@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AvaliacaoComponent } from './avaliacao/avaliacao.component';
+import { SeriesInfoComponent } from './series/series-info.component';
 import { SeriesListComponent } from './series/series-list.component';
 
 const routes: Routes = [
@@ -10,6 +12,14 @@ const routes: Routes = [
   {
     path: '',
     component: SeriesListComponent  },
+    {
+    path: 'series/info',
+    component: SeriesInfoComponent  
+    },
+    {
+    path:'avaliacao',
+    component: AvaliacaoComponent
+    }
 ];
 
 @NgModule({
