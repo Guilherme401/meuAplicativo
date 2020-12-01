@@ -15,7 +15,6 @@ public icones;
 
 
     ngOnInit(){
-        console.log(this.nota)
         if(this.nota == 5){
             this.icones = ["heart","heart","heart","heart","heart"];
         }

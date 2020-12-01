@@ -12,8 +12,9 @@
             <h2>{{serie.nome}}</h2>
             <h3>A serie tem {{serie.temporadas}} temporadas</h3>
             <h3>Nota: {{serie.nota}}</h3>
-            <app-avaliacao nota="{{serie.nota}}"></app-avaliacao>
-            </ion-label>    
+            <app-avaliacao nota="{{serie.nota}}"></app-avaliacao> <br>
+            <a [routerLink]="['/series/info', serie.id]">Visualisar</a>
+        </ion-label>    
         </ion-item>
     </ion-list>
 </ion-content>

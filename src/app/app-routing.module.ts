@@ -13,7 +13,7 @@ const routes: Routes = [
     path: '',
     component: SeriesListComponent  },
     {
-    path: 'series/info',
+    path: 'series/info/:id',
     component: SeriesInfoComponent  
     },
     {
