@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { SeriesListComponent } from './series/series-list.component';
 import { SeriesInfoComponent } from './series/series-info.component';
 import { AvaliacaoComponent } from './avaliacao/avaliacao.component';
+import { FilmesListComponent } from './filmes-list/filmes-list.component';
 
 @NgModule({
-  declarations: [AppComponent , SeriesListComponent, SeriesInfoComponent, AvaliacaoComponent],
+  declarations: [AppComponent , SeriesListComponent, SeriesInfoComponent, AvaliacaoComponent, FilmesListComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
