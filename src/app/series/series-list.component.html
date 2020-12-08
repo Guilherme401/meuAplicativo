@@ -6,11 +6,17 @@
 </ion-toolbar>
 </ion-header>
 <ion-content>
+
+    <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button [routerLink]="['series/add']">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
     <ion-list>
         <ion-item *ngFor="let serie of series">
             <ion-label>
             <h2>{{serie.nome}}</h2>
-            <h3>A serie tem {{serie.temporadas}} temporadas</h3>
             <h3>Nota: {{serie.nota}}</h3>
             <app-avaliacao nota="{{serie.nota}}"></app-avaliacao> <br>
             <a [routerLink]="['/series/info', serie.id]">Visualisar</a>

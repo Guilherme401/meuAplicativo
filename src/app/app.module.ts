@@ -12,11 +12,18 @@ import { SeriesListComponent } from './series/series-list.component';
 import { SeriesInfoComponent } from './series/series-info.component';
 import { AvaliacaoComponent } from './avaliacao/avaliacao.component';
 import { FilmesListComponent } from './filmes-list/filmes-list.component';
+import { SeriesAddComponent } from './series/series-add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent , SeriesListComponent, SeriesInfoComponent, AvaliacaoComponent, FilmesListComponent],
+  declarations: [AppComponent,
+     SeriesListComponent, 
+     SeriesInfoComponent, 
+     AvaliacaoComponent, 
+     FilmesListComponent,
+     SeriesAddComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
