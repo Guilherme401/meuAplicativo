@@ -14,4 +14,10 @@ public series = [];
 ngOnInit(){
     this.series = this.seriesService.pegarTodasSeries();
 }
+
+removerSerie(id){
+    this.seriesService.removerSeriePorId(id);
+}
+
+
 }
