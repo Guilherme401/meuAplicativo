@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnChanges, OnInit } from "@angular/core";
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from "@angular/core";
     templateUrl: "avaliacao.component.html"
 })
 
-export class AvaliacaoComponent implements OnInit{
+export class AvaliacaoComponent implements OnChanges{
 
 @Input()
 public nota;
@@ -14,7 +14,7 @@ public icones;
 
 
 
-    ngOnInit(){
+    ngOnChanges(){
         if(this.nota == 5){
             this.icones = ["heart","heart","heart","heart","heart"];
         }

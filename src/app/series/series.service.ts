@@ -105,8 +105,25 @@ if(this.series[i].id == id){
 }
 
 adcionarSeries(series){
-this.series.push(series);
+if(series.id){
+this.atualizarSerie(series);
+} else{
+  this.series.push(series);
+}
   }
+
+  atualizarSerie(series){
+    for(let i=0; i<=this.series.length; i++){
+if(this.series[i].id == series.id){
+  this.series[i] = series;
+  break;
+}
+
+    }
+  }
+
+
+
   removerSeriePorId(id){
     for(let i=0; i<=this.series.length; i++){
       if(this.series[i].id == id){
