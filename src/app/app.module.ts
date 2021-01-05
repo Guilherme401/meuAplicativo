@@ -14,6 +14,7 @@ import { AvaliacaoComponent } from './avaliacao/avaliacao.component';
 import { FilmesListComponent } from './filmes-list/filmes-list.component';
 import { SeriesAddComponent } from './series/series-add.component';
 import { FormsModule } from '@angular/forms';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent,
@@ -23,7 +24,7 @@ import { FormsModule } from '@angular/forms';
      FilmesListComponent,
      SeriesAddComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,

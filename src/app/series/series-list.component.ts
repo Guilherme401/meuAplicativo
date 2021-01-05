@@ -5,14 +5,21 @@ import { SeriesService } from './series.service';
     selector: "app-series-list",
     templateUrl: "series-list.component.html"
 })
-export class SeriesListComponent implements OnInit {
+export class SeriesListComponent {
 
 public series = [];
 
     constructor(private seriesService: SeriesService){}
 
-ngOnInit(){
+ionViewWillEnter(){
     this.series = this.seriesService.pegarTodasSeries();
+}
+
+testeSalvarNoNavegador(){
+    this.seriesService.salvarNoNavegador();
+}
+testeRecuperarDoNavegador(){
+    this.seriesService.recuperarDoNavegador();
 }
 
 removerSerie(id){

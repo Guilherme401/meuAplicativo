@@ -25,7 +25,7 @@ this.serie.id = id;
 
     formularioSeries(){
         this.seriesService.adcionarSeries(this.serie);
-        this.router.navigate(['/']);
+        this.router.navigate(["/"]);
 }
 
 }
